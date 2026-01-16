@@ -1,5 +1,8 @@
 import React from 'react'
 import ThemeToggle from '@/components/ThemeToggle'
+import StartBackgroundEffects from '@/components/StarBackgroundEffects'
+import Navbar from '../components/Navbar'
+import HeroSection from '@/components/HeroSection'
 
 const Home = () => {
   return (
@@ -8,11 +11,13 @@ const Home = () => {
     <ThemeToggle />
 
     {/* Backgroung Effects */}
+    <StartBackgroundEffects />
 
     {/* Navbar */}
+    <Navbar />
 
     {/* Main Content */}
-
+    <HeroSection />
     {/* Footer */}
     
     </div>
