@@ -4,6 +4,7 @@ import StartBackgroundEffects from '@/components/StarBackgroundEffects'
 import Navbar from '../components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import AboutSection from '../components/AboutSection'
+import SkillsSection from '@/components/SkillsSection'
 
 const Home = () => {
   return (
@@ -19,8 +20,8 @@ const Home = () => {
 
     {/* Main Content */}
     <HeroSection />
-
     <AboutSection />
+    <SkillsSection />
     {/* Footer */}
     
     </div>
