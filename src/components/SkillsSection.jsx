@@ -15,6 +15,9 @@ const skills = [
   { name: "MongoDB", level: 70, category: "backend" },
   { name: "SQL", level: 75, category: "backend" },
   { name: "PostgreSQL", level: 75, category: "backend" },
+  { name: "Python", level: 70, category: "backend" },
+  { name: "Django", level: 60, category: "backend" },
+  { name: "RESTful APIs", level: 75, category: "backend" },
 
   // Tools
   { name: "Git/GitHub", level: 90, category: "tools" },
@@ -23,10 +26,17 @@ const skills = [
   { name: "Figma", level: 60, category: "tools" },
 
   // Other
-  { name: "Python", level: 70, category: "other" },
-  { name: "Django", level: 60, category: "other" },
-  { name: "RESTful APIs", level: 75, category: "other" },
+  { name: "WordPress", level: 70, category: "other" },
+  { name: "SEO", level: 60, category: "other" },
+  { name: "Facebook Ads", level: 65, category: "other" },
+  { name: "Google Analytics", level: 60, category: "other" },
+  { name: "Google Ads", level: 60, category: "other" },  
+  
 ];
+
+
+
+
 
 const categories = ["all", "frontend", "backend", "tools", "other"];
 
