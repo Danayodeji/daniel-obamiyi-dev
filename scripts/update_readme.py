@@ -1,4 +1,6 @@
-# ADDO-Dev Portfolio
+from pathlib import Path
+
+content = """# ADDO-Dev Portfolio
 
 A single-page React + Vite experience that showcases Daniel (Ayodeji Obamiyi) as a full-stack builder. The site mixes a cosmic-inspired visual theme, animated starfield effects, curated projects, a skills matrix, and a form wired to EmailJS so visitors can contact Daniel directly.
 
@@ -21,25 +23,25 @@ A single-page React + Vite experience that showcases Daniel (Ayodeji Obamiyi) as
 
 ## Getting started
 1. Install dependencies:
-	```bash
-	npm install
-	```
+   ```bash
+   npm install
+   ```
 2. Run the development server:
-	```bash
-	npm run dev
-	```
+   ```bash
+   npm run dev
+   ```
 3. Check linting:
-	```bash
-	npm run lint
-	```
+   ```bash
+   npm run lint
+   ```
 4. Build for production:
-	```bash
-	npm run build
-	```
+   ```bash
+   npm run build
+   ```
 5. Preview the production build locally:
-	```bash
-	npm run preview
-	```
+   ```bash
+   npm run preview
+   ```
 
 ## Environment variables
 The contact form uses EmailJS. Create `.env.local` with the following keys (per [Vite env conventions](https://vite.dev/config/env/)):
@@ -59,8 +61,8 @@ src/
   main.jsx          # Mounts `<App />` inside `<StrictMode>`
   App.jsx           # Router setup that renders `Home` and falls back to `NotFound`
   pages/
-	 Home.jsx        # Composes hero, about, skills, projects, contact, and footer
-	 NotFound.jsx    # 404 placeholder to catch unknown routes
+    Home.jsx        # Composes hero, about, skills, projects, contact, and footer
+    NotFound.jsx    # 404 placeholder to catch unknown routes
   components/       # Navbar, hero, about, skills, projects, contact, footer, theme toggle, and star effects
   lib/utils.jsx     # `cn` helper that combines `clsx` and `twMerge`
   index.css         # Tailwind import + custom utilities, animations, and theme tokens
@@ -95,19 +97,5 @@ dist/               # Output after `npm run build`
 - Optional: Run `npm run preview` after building to validate the production output locally, especially the favicon and contact form.
 
 Feel free to extend this documentation with new sections, deployment steps, or integration notes as the portfolio evolves.
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+"""
+Path("README.md").write_text(content, encoding="utf-8")
