@@ -95,5 +95,3 @@ dist/               # Output after `npm run build`
 - Optional: Run `npm run preview` after building to validate the production output locally, especially the favicon and contact form.
 
 Feel free to extend this documentation with new sections, deployment steps, or integration notes as the portfolio evolves.
-# React + Vite
-
