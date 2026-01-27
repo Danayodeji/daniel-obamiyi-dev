@@ -1,43 +1,59 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+const generateStars = () => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const numStars = Math.floor((width * height) / 10000);
+  const newStars = [];
+
+  for (let i = 0; i < numStars; i += 1) {
+    newStars.push({
+      id: i,
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 3 + 1,
+      opacity: Math.random() * 0.5 + 0.5,
+      animationDuration: Math.random() * 4 + 2,
+    });
+  }
+
+  return newStars;
+};
+
+const generateMeteors = () => {
+  const numMeteors = 20;
+  const newMeteors = [];
+
+  for (let i = 0; i < numMeteors; i += 1) {
+    newMeteors.push({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 90,
+      size: Math.random() * 2 + 1,
+      delay: Math.random() * 15,
+      animationDuration: Math.random() * 3 + 3,
+    });
+  }
+
+  return newMeteors;
+};
 
 const StarBackgroundEffects = () => {
-  const generateStars = () => {
-    const numStars = Math.floor(window.innerWidth * window.innerHeight / 10000);
-    const newStars = [];
-    for (let i = 0; i < numStars; i++) {
-      newStars.push({
-        id: i,
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.5,
-        animationDuration: Math.random() * 4 + 2,
-      });
-    }
-    return newStars;
-  };
+  const [stars, setStars] = useState(generateStars);
+  const [meteors, setMeteors] = useState(generateMeteors);
 
-  const generateMeteors = () => {
-    const numMeteors = 20;
-    const newMeteors = [];
-    for (let i = 0; i < numMeteors; i++) {
-      newMeteors.push({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 90,
-        size: Math.random() * 2 + 1,
-        delay: Math.random() * 15,
-        animationDuration: Math.random() * 3 + 3,
-      });
-    }
-    return newMeteors;
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setStars(generateStars());
+      setMeteors(generateMeteors());
+    };
 
-  const [stars] = useState(() => generateStars());
-  const [meteors] = useState(() => generateMeteors());
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="fixed inset-0 w-screen h-screen overflow-hidden pointer-events-none z-0">
       {stars.map((star) => (
         <div
           key={star.id}
