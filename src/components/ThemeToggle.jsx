@@ -32,7 +32,7 @@ const ThemeToggle = () => {
       onClick={toggleTheme} 
       aria-label="Toggle theme" 
       className={cn(
-        "fixed max-sm:hidden top-3 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+        "fixed top-3 right-5 z-50 p-2 rounded-full transition-colors duration-300",
         isDarkMode ? "bg-yellow-100/10 hover:bg-yellow-200/20" : "bg-gray-200/80 hover:bg-gray-300/90 text-gray-900"
       )}
     >
