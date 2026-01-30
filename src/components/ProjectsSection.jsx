@@ -9,7 +9,7 @@ const projects = [
       "A web application for ordering food from local restaurants in Darkmode.",
     imageUrl: "/projects/project1.png   ",
     tags: ["React", "Vite", "Node.js", "Express", "MongoDB", "CSS"],
-    DemoUrl: "https://food-ordering-webapp-7hsi.onrender.com/",
+    DemoUrl: "https://food-ordering-webapp-inky.vercel.app",
     GitHubUrl: "https://github.com/Danayodeji/food-ordering-webapp",
   },
 
@@ -30,7 +30,7 @@ const projects = [
       "A web application for ordering food from local restaurants in Light mode.",
     imageUrl: "/projects/project3.png   ",
     tags: ["React", "Vite", "Node.js", "Express", "MongoDB", "CSS"],
-    DemoUrl: "https://food-ordering-webapp-7hsi.onrender.com/",
+    DemoUrl: "https://food-ordering-webapp-inky.vercel.app",
     GitHubUrl: "https://github.com/Danayodeji/food-ordering-webapp",
   },
 ];
@@ -75,7 +75,7 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-                {/* Link to Project Repo on GitHub */}
+                {/* Link to Project Repo */}
                 <div className="flex justify-between">
                   <a
                     href={project.DemoUrl}
