@@ -23,9 +23,9 @@ const Home = () => {
 
     {/* Main Content */}
     <HeroSection />
-    <AboutSection />
-    <SkillsSection />
     <ProjectsSection />
+    <AboutSection />
+    <SkillsSection />    
     <ContactSection />
     {/* Footer */}
     <Footer />
