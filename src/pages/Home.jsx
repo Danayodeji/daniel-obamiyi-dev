@@ -3,9 +3,12 @@ import ThemeToggle from '@/components/ThemeToggle'
 import StartBackgroundEffects from '@/components/StarBackgroundEffects'
 import Navbar from '../components/Navbar'
 import HeroSection from '@/components/HeroSection'
+import HighlightsSection from '@/components/HighlightsSection'
 import AboutSection from '../components/AboutSection'
+import NowSection from '@/components/NowSection'
 import SkillsSection from '@/components/SkillsSection'
 import ProjectsSection from '../components/ProjectsSection'
+import TestimonialsSection from '@/components/TestimonialsSection'
 import ContactSection from '../components/ContactSection'
 import Footer from '../components/Footer'
 
@@ -23,8 +26,11 @@ const Home = () => {
 
     {/* Main Content */}
     <HeroSection />
+    <HighlightsSection />
     <ProjectsSection />
+    <TestimonialsSection />
     <AboutSection />
+    <NowSection />
     <SkillsSection />    
     <ContactSection />
     {/* Footer */}

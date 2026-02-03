@@ -67,9 +67,9 @@ const ContactSection = () => {
 
 
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/30">
+    <section id="contact" className="py-24 px-4 relative bg-secondary/30 section-divider">
         <div className="container max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 display-font">
                 Get in <span className="text-primary">Touch</span>
             </h2>
             <p className="text-center mb-12 text-muted-foreground max-w-2xl mx-auto">

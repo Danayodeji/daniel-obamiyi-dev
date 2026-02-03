@@ -54,6 +54,17 @@ const StarBackgroundEffects = () => {
 
   return (
     <div className="fixed inset-0 w-screen h-screen overflow-hidden pointer-events-none z-0">
+      <div className="grain-layer" />
+      <div className="blob animate-[blob_12s_ease-in-out_infinite] w-80 h-80 bg-primary/35 -top-24 -left-16" />
+      <div
+        className="blob animate-[blob_14s_ease-in-out_infinite] w-96 h-96 bg-accent/30 top-1/4 -right-20"
+        style={{ animationDelay: "-2s" }}
+      />
+      <div
+        className="blob animate-[blob_16s_ease-in-out_infinite] w-72 h-72 bg-primary/25 bottom-10 left-1/3"
+        style={{ animationDelay: "-4s" }}
+      />
+
       {stars.map((star) => (
         <div
           key={star.id}

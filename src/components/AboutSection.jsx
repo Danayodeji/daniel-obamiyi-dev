@@ -3,11 +3,11 @@ import { Briefcase, Code, Layout, Server } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about">
-      <div className="relative py-24 px-4">
+    <section id="about" className="relative py-24 px-4 section-divider">
+      <div className="relative">
         {" "}
         <div className="container max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 display-font">
             About <span className="text-primary">Me</span>
           </h2>
 
